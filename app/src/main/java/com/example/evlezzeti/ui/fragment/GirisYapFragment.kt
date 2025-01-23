@@ -1,7 +1,6 @@
 package com.example.evlezzeti.ui.fragment
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +23,7 @@ class GirisYapFragment : Fragment() {
         //Animasyon icin
         binding.lottieAnimationView.setAnimation(R.raw.giris_gif_json)
         binding.lottieAnimationView.playAnimation()
-        Toast.makeText(requireContext(), "Burayı Umut Yaptı", Toast.LENGTH_LONG).show()
+
 
         //Kullanici Giris Yapma Kontrolu
         binding.girisYapButton.setOnClickListener{
