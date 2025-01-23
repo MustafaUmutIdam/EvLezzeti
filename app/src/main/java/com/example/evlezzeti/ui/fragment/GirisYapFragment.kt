@@ -17,6 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class GirisYapFragment : Fragment() {
     private lateinit var binding : FragmentGirisYapBinding
     private lateinit var viewModel: GirisYapViewModel
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View{
         binding = FragmentGirisYapBinding.inflate(inflater, container, false)
 
@@ -24,7 +25,7 @@ class GirisYapFragment : Fragment() {
         binding.lottieAnimationView.setAnimation(R.raw.giris_gif_json)
         binding.lottieAnimationView.playAnimation()
 
-        //Giris Yapma Kontrolu
+        //Kullanici Giris Yapma Kontrolu
         binding.girisYapButton.setOnClickListener{
             val ePosta = binding.ePostaEditText.text.toString()
             val sifre = binding.sifreEditText.text.toString()
