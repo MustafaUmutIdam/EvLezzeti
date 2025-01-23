@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <!-- Genel metin stil -->
+        <style name="GenelTextStyle">
+            <item name="android:textSize">16sp</item>
+            <item name="android:textColor">@color/black</item>
+            <item name="android:fontFamily">@font/dosis</item>
+        </style>
+
+        <!-- Buton stil -->
+        <style name="ButtonStyle">
+            <item name="android:textSize">16sp</item>
+            <item name="android:textColor">@color/white</item>
+            <item name="android:fontFamily">@font/dosis_extrabold</item>
+            <item name="android:layout_width">300dp</item>
+            <item name="android:layout_height">wrap_content</item>
+        </style>
+
+    <!-- TextInput stil -->
+    <style name="TextInputStyle">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusBottomEnd">32dp</item>
+        <item name="boxCornerRadiusBottomStart">32dp</item>
+        <item name="boxCornerRadiusTopEnd">32dp</item>
+        <item name="boxCornerRadiusTopStart">32dp</item>
+        <item name="boxStrokeColor">@color/anaRenk</item>
+        <item name="boxStrokeErrorColor">@color/black</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+</resources>
+
+
