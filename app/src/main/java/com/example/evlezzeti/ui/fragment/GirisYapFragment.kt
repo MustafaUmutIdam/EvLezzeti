@@ -24,6 +24,7 @@ class GirisYapFragment : Fragment() {
         //Animasyon icin
         binding.lottieAnimationView.setAnimation(R.raw.giris_gif_json)
         binding.lottieAnimationView.playAnimation()
+        Toast.makeText(requireContext(), "Burayı Umut Yaptı", Toast.LENGTH_LONG).show()
 
         //Kullanici Giris Yapma Kontrolu
         binding.girisYapButton.setOnClickListener{
