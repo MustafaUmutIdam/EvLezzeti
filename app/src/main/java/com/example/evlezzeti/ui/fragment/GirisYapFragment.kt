@@ -17,14 +17,16 @@ import dagger.hilt.android.AndroidEntryPoint
 class GirisYapFragment : Fragment() {
     private lateinit var binding : FragmentGirisYapBinding
     private lateinit var viewModel: GirisYapViewModel
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View{
         binding = FragmentGirisYapBinding.inflate(inflater, container, false)
 
         //Animasyon icin
         binding.lottieAnimationView.setAnimation(R.raw.giris_gif_json)
         binding.lottieAnimationView.playAnimation()
+        Toast.makeText(requireContext(), "Burayı Umut Yaptı", Toast.LENGTH_LONG).show()
 
-        //Giris Yapma Kontrolu
+        //Kullanici Giris Yapma Kontrolu
         binding.girisYapButton.setOnClickListener{
             val ePosta = binding.ePostaEditText.text.toString()
             val sifre = binding.sifreEditText.text.toString()
