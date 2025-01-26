@@ -9,6 +9,12 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
+    //burada bir takım denemeler yapacağım ki bakalım ortak github
+    // kullanımı sapalanabiliyor mu ?
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
