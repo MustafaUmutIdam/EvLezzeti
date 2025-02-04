@@ -9,5 +9,10 @@
         android:id="@+id/girisYapFragment"
         android:name="com.example.evlezzeti.ui.fragment.GirisYapFragment"
         android:label="fragment_giris_yap"
-        tools:layout="@layout/fragment_giris_yap" />
+        tools:layout="@layout/fragment_giris_yap" >
+        <action
+            android:id="@+id/girisYapToBottomNav"
+            app:destination="@id/bottom_nav" />
+    </fragment>
+    <include app:graph="@navigation/bottom_nav" />
 </navigation>

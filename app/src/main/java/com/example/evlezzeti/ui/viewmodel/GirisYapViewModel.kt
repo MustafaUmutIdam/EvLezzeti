@@ -12,15 +12,10 @@ import javax.inject.Inject
 class GirisYapViewModel @Inject constructor (var rep : Repository): ViewModel() {
 
 
-    fun kullaniciGirisKontrol(ePosta:String, sifre:String): String{
+    fun kullaniciGirisKontrol(ePosta:String, sifre:String): Boolean{
 
         val durum = rep.kullaniciGirisKontrol(ePosta,sifre)
 
-        if (durum==true){
-            return "Hosgeldiniz!!!"
-        }
-        else {
-            return "E-Posta veya şifre hatalı!!!"
-        }
+        return durum
     }
 }
