@@ -10,7 +10,7 @@ class FirestoreDataSource {
     fun kullaniciGirisKontrol(ePosta:String, sifre:String): Boolean {
 
         var dogruEPosta = "merhaba@evlezzeti.com"
-        var dogruSifre = "1234567"
+        var dogruSifre = "123456789"
 
         return ePosta == dogruEPosta && sifre==dogruSifre
     }
