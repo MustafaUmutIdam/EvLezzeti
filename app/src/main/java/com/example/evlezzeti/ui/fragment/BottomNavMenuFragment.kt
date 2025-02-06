@@ -22,7 +22,7 @@ class BottomNavMenuFragment : Fragment() {
         // Xml'den buraya eriserek burdaki fonksiyonları oraya tasiyabiliriz
         binding.bottomNavMenuFragment = this
 
-        binding.sayfaIsmi = "Menü Sayfası"
+        binding.sayfaIsmi = "Menü Sayfası "
 
         return binding.root
     }

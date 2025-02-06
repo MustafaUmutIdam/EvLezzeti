@@ -34,7 +34,7 @@ class GirisYapFragment : Fragment() {
             val sifre = binding.sifreEditText.text.toString()
 
             if (ePosta.isEmpty() || sifre.isEmpty()){
-                Toast.makeText(requireContext(), "Lütfen tüm alanları doldurun!", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), "Lütfen tüm alanları doldurun !", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
             else {
