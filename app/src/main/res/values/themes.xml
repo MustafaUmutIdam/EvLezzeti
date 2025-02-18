@@ -7,4 +7,9 @@
     </style>
 
     <style name="Theme.EvLezzeti" parent="Base.Theme.EvLezzeti" />
+
+    <!-- Bottom Navigation tema ayarları -->
+    <style name="BottomNavigationTheme" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@drawable/bottom_nav_background</item>
+    </style>
 </resources>
