@@ -10,7 +10,7 @@ android {
     namespace = "com.example.evlezzeti"
     compileSdk = 34
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
         dataBinding = true
     }
@@ -66,7 +66,12 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.dagger.hilt.android.compiler)
 
+    // Glide Kütüphanesi
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
+
 }
+
 kapt {
     correctErrorTypes = true
 }
