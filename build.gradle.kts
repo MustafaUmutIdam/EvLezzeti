@@ -1,7 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript{
-    dependencies{
+buildscript {
+    dependencies {
         classpath (libs.dagger.hilt.android.gradle.plugin)
+        classpath (libs.navigation.safe.args.gradle.plugin) // Safe Args eklendi
     }
 }
 

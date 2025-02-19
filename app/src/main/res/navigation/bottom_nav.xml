@@ -28,5 +28,9 @@
         android:id="@+id/restaurantDetayFragment"
         android:name="com.example.evlezzeti.ui.fragment.RestaurantDetayFragment"
         android:label="fragment_restaurant_detay"
-        tools:layout="@layout/fragment_restaurant_detay" />
+        tools:layout="@layout/fragment_restaurant_detay" >
+        <argument
+            android:name="restaurant"
+            app:argType="com.example.evlezzeti.data.entity.Restaurant" />
+    </fragment>
 </navigation>

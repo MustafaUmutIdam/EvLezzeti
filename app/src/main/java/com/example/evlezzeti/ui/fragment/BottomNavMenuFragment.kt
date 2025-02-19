@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.evlezzeti.adapter.RestaurantAdapter
 import com.example.evlezzeti.data.entity.Restaurant
@@ -16,12 +17,16 @@ class BottomNavMenuFragment : Fragment() {
     private val restaurantAdapter = RestaurantAdapter()
 
     override fun onCreateView(
+
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentBottomNavMenuBinding.inflate(inflater, container, false)
+
+        binding.restaurantRecyclerView.adapter=restaurantAdapter
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -35,6 +40,11 @@ class BottomNavMenuFragment : Fragment() {
         binding.restaurantRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = restaurantAdapter
+        }
+
+        restaurantAdapter.setOnRestaurantClickListener { restaurant ->
+            val action = BottomNavMenuFragmentDirections.restaurantDetayGecis(restaurant)
+            findNavController().navigate(action)
         }
     }
 
@@ -57,37 +67,44 @@ class BottomNavMenuFragment : Fragment() {
             Restaurant(
                 id = 1,
                 name = "Ayşe Teyze'nin Yeri",
-                distance = "1.2 km uzaklıkta"
+                distance = "1.2 km uzaklıkta",
+                isFavorite = false
             ),
             Restaurant(
                 id = 2,
                 name = "Anadolu Lezzetleri",
-                distance = "2.5 km uzaklıkta"
+                distance = "2.5 km uzaklıkta",
+                isFavorite = true
             ),
             Restaurant(
                 id = 3,
                 name = "Osmanlı Mutfağı",
-                distance = "0.8 km uzaklıkta"
+                distance = "0.8 km uzaklıkta",
+                isFavorite = false
             ),
             Restaurant(
                 id = 4,
                 name = "Ev Yemekleri Dünyası",
-                distance = "3.1 km uzaklıkta"
+                distance = "3.1 km uzaklıkta",
+                isFavorite = true
             ),
             Restaurant(
                 id = 5,
                 name = "Lezzet Durağı",
-                distance = "1.7 km uzaklıkta"
+                distance = "1.7 km uzaklıkta",
+                isFavorite = true
             ),
             Restaurant(
                 id = 6,
                 name = "Geleneksel Tatlar",
-                distance = "2.3 km uzaklıkta"
+                distance = "2.3 km uzaklıkta",
+                isFavorite = false
             ),
             Restaurant(
                 id = 7,
                 name = "Yöresel Mutfak",
-                distance = "1.5 km uzaklıkta"
+                distance = "1.5 km uzaklıkta",
+                isFavorite = true
             )
         )
         restaurantAdapter.setRestaurants(sampleRestaurants)

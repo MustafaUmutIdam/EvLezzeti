@@ -1,4 +1,5 @@
 [versions]
+navigationSafeArgs = "2.7.2"
 agp = "8.5.1"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
@@ -22,6 +23,7 @@ annotation = "1.9.1"
 glide = "4.16.0" # Glide kütüphanesi eklendi
 
 [libraries]
+navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationSafeArgs" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }

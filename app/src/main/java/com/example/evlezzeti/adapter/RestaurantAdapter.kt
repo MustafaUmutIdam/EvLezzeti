@@ -2,15 +2,18 @@ package com.example.evlezzeti.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.evlezzeti.R
 import com.example.evlezzeti.data.entity.Restaurant
 import com.example.evlezzeti.databinding.ItemRestaurantBinding
+import com.example.evlezzeti.ui.fragment.BottomNavMenuFragmentDirections
 
 class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>() {
 
     private var restaurants = listOf<Restaurant>()
     private var filteredRestaurants = listOf<Restaurant>()
+    private var onRestaurantClickListener: ((Restaurant) -> Unit)? = null
 
     // Her restaurant için farklı bir görsel
     private val restaurantImages = listOf(
@@ -23,9 +26,13 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewH
         R.drawable.yusuf_mutfagi
     )
 
+    fun setOnRestaurantClickListener(listener: (Restaurant) -> Unit) {
+        onRestaurantClickListener = listener
+    }
+
     fun setRestaurants(newRestaurants: List<Restaurant>) {
         restaurants = newRestaurants.mapIndexed { index, restaurant ->
-            restaurant.copy(imageUrl = restaurantImages[index % restaurantImages.size].toString())
+            restaurant.copy(imageResId = restaurantImages[index % restaurantImages.size])
         }
         filteredRestaurants = restaurants
         notifyDataSetChanged()
@@ -52,7 +59,14 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewH
     }
 
     override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
-        holder.bind(filteredRestaurants[position])
+        val restaurant = filteredRestaurants[position]
+        holder.bind(restaurant)
+
+        // CardView'a tıklama işlemi eklendi
+        holder.itemView.setOnClickListener {
+            val gecis = BottomNavMenuFragmentDirections.restaurantDetayGecis(restaurant)
+            Navigation.findNavController(it).navigate(gecis)
+        }
     }
 
     override fun getItemCount() = filteredRestaurants.size
@@ -68,10 +82,9 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewH
                 favoriteButton.isSelected = restaurant.isFavorite
 
                 // Restaurant görselini yükle
-                restaurant.imageUrl?.let { imageUrl ->
-                    restaurantImage.setImageResource(imageUrl.toInt())
+                restaurant.imageResId?.let { imageResId ->
+                    restaurantImage.setImageResource(imageResId)
                 }
-
                 // Favori butonuna tıklama
                 favoriteButton.setOnClickListener {
                     restaurant.isFavorite = !restaurant.isFavorite
@@ -80,4 +93,4 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewH
             }
         }
     }
-} 
+}
