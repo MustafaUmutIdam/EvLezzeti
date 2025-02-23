@@ -1,5 +1,7 @@
 package com.example.evlezzeti.data.entity
 
+import java.io.Serializable
+
 data class Kullanici(val kullaniciId:String? ="",
                      val ePosta:String? ="",
                      val sifre:String ?="",
@@ -8,4 +10,4 @@ data class Kullanici(val kullaniciId:String? ="",
                      val kullaniciAdress:String? ="",
                      val kullaniciKonum:String? ="",
                      val mutfakDurum:String? ="",
-                     val favoriler:String? ="",)
+                     val favoriler:String? ="",):Serializable

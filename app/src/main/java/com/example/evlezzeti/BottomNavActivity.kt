@@ -8,7 +8,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.evlezzeti.databinding.ActivityBottomNavBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class BottomNavActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBottomNavBinding
 

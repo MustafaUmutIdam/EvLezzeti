@@ -29,6 +29,9 @@
         <item name="boxStrokeErrorColor">@color/black</item>
         <item name="boxStrokeWidth">2dp</item>
     </style>
+    <style name="Theme.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/anaRenk</item>
+    </style>
 
 </resources>
 

@@ -45,6 +45,7 @@ class GirisYapFragment : Fragment() {
                     Navigation.findNavController(it).navigate(R.id.girisYapToBottomNav)
                     val intent = Intent(requireContext(), BottomNavActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+
                     startActivity(intent)
                 }
                 // Giris basarisiz
