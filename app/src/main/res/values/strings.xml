@@ -5,6 +5,13 @@
     <string name="giris_kaydol_button">Kaydol</string>
     <string name="giris_girisYap_button">Giriş Yap</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="giris_sayfasi_hosgeldiniz">Ev Lezzeti\'ne Hoşgeldiniz!!!</string>
+    <string name="giris_sayfasi_giris_yap">Hesabınız varsa aşağıdaki seçenekleri kullanarak giriş yapabilirsiniz!</string>
+    <string name="giris_sayfasi_hesap_olustur">Hesabın yoksa buradan kaydolabilirsin!</string>
+    <string name="giris_sayfasi_google_kaydol_button">Google ile bağlan</string>
+    <string name="giris_sayfasi_ePosta_kaydol_button">E-Posta ile kaydol</string>
+
+
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
