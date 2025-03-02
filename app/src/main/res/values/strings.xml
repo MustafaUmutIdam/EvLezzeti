@@ -13,6 +13,7 @@
     <string name="giris_sayfasi_ePosta_kaydol_button">E-Posta ile kaydol</string>
 
 
+
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
