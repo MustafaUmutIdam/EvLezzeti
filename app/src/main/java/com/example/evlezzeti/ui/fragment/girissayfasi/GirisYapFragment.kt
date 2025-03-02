@@ -1,4 +1,4 @@
-package com.example.evlezzeti.ui.fragment
+package com.example.evlezzeti.ui.fragment.girissayfasi
 
 import android.content.Intent
 import android.os.Bundle
