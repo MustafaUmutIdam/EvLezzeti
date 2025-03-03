@@ -36,18 +36,19 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ePostaInputLayout"
         style="@style/TextInputStyle"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewGirisYap">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ePostaEditText"
-            style="@style/GenelTextStyle"
+            style="@style/KucukTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="merhaba@evlezzeti.com"
-            android:text="merhaba@evlezzeti.com" />
+            android:text="merhaba@evlezzeti.com"
+            android:textAlignment="viewStart" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -59,13 +60,14 @@
 
         <EditText
             android:id="@+id/sifreEditText"
-            style="@style/GenelTextStyle"
+            style="@style/KucukTextStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="300"
             android:ems="10"
             android:hint="********"
             android:inputType="textPassword"
+            android:textAlignment="viewStart"
             android:visibility="visible" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,7 +79,7 @@
         android:fontFamily="@font/dosis_bold"
         android:text="@string/giris_sayfasi_hosgeldiniz"
         android:textColor="@color/anaRenk"
-        android:textSize="24sp"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,12 +87,12 @@
 
     <TextView
         android:id="@+id/textViewGirisYap"
-        style="@style/GenelTextStyle"
+        style="@style/KucukTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/giris_sayfasi_giris_yap"
+        android:textAlignment="center"
         android:textColor="@color/anaRenk"
-        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +118,7 @@
 
         <TextView
             android:id="@+id/textViewKaydol"
-            style="@style/GenelTextStyle"
+            style="@style/KucukTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -125,40 +127,33 @@
             android:paddingEnd="8dp"
             android:text="@string/giris_sayfasi_hesap_olustur"
             android:textColor="@color/anaRenk"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
     </FrameLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/googleBaglanButton"
         style="@style/ButtonStyle"
-        android:layout_width="300dp"
         android:layout_marginTop="8dp"
         android:height="50dp"
+        android:fontFamily="@font/dosis_medium"
         android:text="@string/giris_sayfasi_google_kaydol_button"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:icon="@drawable/google_icon"
-        app:iconGravity="textStart"
-        app:iconPadding="4dp"
-        app:iconSize="24dp"
-        app:iconTint="@color/white"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/girisYapButton"
-        app:strokeColor="@color/white"
-        app:strokeWidth="2dp" />
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/ePostaKaydolButton"
         style="@style/ButtonStyle"
-        android:layout_width="300dp"
         android:layout_marginTop="8dp"
         android:height="50dp"
         android:text="@string/giris_sayfasi_ePosta_kaydol_button"
         android:textColor="@color/white"
-        android:textSize="16sp"
         app:icon="@drawable/email_icon"
         app:iconGravity="textStart"
         app:iconPadding="4dp"
@@ -170,6 +165,26 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         app:strokeColor="@color/white"
         app:strokeWidth="2dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        app:cardBackgroundColor="#E4E4E4"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/googleBaglanButton"
+        app:layout_constraintStart_toStartOf="@+id/googleBaglanButton"
+        app:layout_constraintTop_toTopOf="@+id/googleBaglanButton">
+
+        <ImageView
+            android:id="@+id/imageViewGoogleIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/google_icon_two" />
+    </androidx.cardview.widget.CardView>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
