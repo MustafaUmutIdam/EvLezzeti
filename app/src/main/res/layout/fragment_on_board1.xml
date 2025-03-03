@@ -24,10 +24,9 @@
         style="@style/GenelTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/dosis_bold"
         android:text="Evlerindeki Onlarca Aşçı"
         android:textColor="@color/anaRenk"
-        android:textSize="32sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,14 +34,14 @@
 
     <TextView
         android:id="@+id/textView5"
-        style="@style/GenelTextStyle"
+        style="@style/KucukTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="En taze malzemelerle, ev yapımı lezzetleri senin için özenle hazırlıyoruz"
         android:textAlignment="center"
         android:textColor="@color/anaRenk"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
