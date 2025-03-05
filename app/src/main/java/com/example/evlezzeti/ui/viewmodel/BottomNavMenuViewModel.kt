@@ -19,8 +19,6 @@ class BottomNavMenuViewModel @Inject constructor (var rep : Repository): ViewMod
     }
 
     private fun mutfakYukle(){
-        CoroutineScope(Dispatchers.Main).launch {
-            mutfakListe.value= rep.mutfakYukle()
-        }
+        mutfakListe = rep.mutfakYukle()
     }
 }

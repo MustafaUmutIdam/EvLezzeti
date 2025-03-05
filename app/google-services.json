@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "679114511045",
+    "project_id": "evlezzeti-d0f47",
+    "storage_bucket": "evlezzeti-d0f47.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679114511045:android:141c9c7ce33afd8aead6ac",
+        "android_client_info": {
+          "package_name": "com.example.evlezzeti"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0yeibHIVlpBfMmUkie-V_hhYOYUU43zk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
