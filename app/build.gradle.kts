@@ -4,6 +4,7 @@ plugins {
 
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -65,6 +66,8 @@ dependencies {
     implementation(libs.lottie)
     implementation(libs.hilt.android)
     kapt(libs.dagger.hilt.android.compiler)
+    implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
+    implementation("com.google.firebase:firebase-firestore:25.1.1")
 
 }
 kapt {
