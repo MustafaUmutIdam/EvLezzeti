@@ -55,6 +55,11 @@ class GirisYapFragment : Fragment() {
             }
         }
 
+        // EPostaKaydol gecis
+        binding.ePostaKaydolButton.setOnClickListener{
+            Navigation.findNavController(it).navigate(R.id.girisYapToEPostaKaydol)
+        }
+
         return binding.root
     }
 

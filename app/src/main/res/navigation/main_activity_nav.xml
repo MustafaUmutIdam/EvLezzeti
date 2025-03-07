@@ -13,6 +13,9 @@
         <action
             android:id="@+id/girisYapToBottomNav"
             app:destination="@id/bottom_nav" />
+        <action
+            android:id="@+id/girisYapToEPostaKaydol"
+            app:destination="@id/EPostaKaydolFragment" />
     </fragment>
     <include app:graph="@navigation/bottom_nav" />
     <fragment
@@ -51,4 +54,9 @@
             android:id="@+id/onBoard1Gecis"
             app:destination="@id/onBoard1Fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/EPostaKaydolFragment"
+        android:name="com.example.evlezzeti.ui.fragment.girissayfasi.EPostaKaydolFragment"
+        android:label="fragment_e_posta_kaydol"
+        tools:layout="@layout/fragment_e_posta_kaydol" />
 </navigation>
