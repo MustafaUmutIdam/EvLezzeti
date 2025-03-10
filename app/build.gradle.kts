@@ -18,7 +18,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.evlezzeti"
-        minSdk = 25
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -70,6 +70,10 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore:25.1.1")
     implementation ("com.google.firebase:firebase-auth-ktx:22.3.1")
     implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
+    implementation("androidx.credentials:credentials:1.3.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
 
 }
 kapt {
