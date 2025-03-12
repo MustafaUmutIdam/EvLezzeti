@@ -9,6 +9,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -17,18 +18,30 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideFireStoreDataSource(collection:CollectionReference) : FirestoreDataSource{
-        return FirestoreDataSource(collection)
+    @Named("Mutfaklar")
+    fun provideMutfakCollectionReference(): CollectionReference {
+        return Firebase.firestore.collection("Mutfaklar")
     }
 
     @Provides
     @Singleton
-    fun provideRepository(fds:FirestoreDataSource) : Repository {
-        return Repository(fds)
+    @Named("Kategoriler")
+    fun provideKategoriCollectionReference(): CollectionReference {
+        return Firebase.firestore.collection("Kategoriler")
     }
+
     @Provides
-    @Singleton // provideFireStoreDataSource icin Collection sagladik
-    fun provideCollectionReference() : CollectionReference{
-        return Firebase.firestore.collection("Mutfaklar")
+    @Singleton
+    fun provideFireStoreDataSource(
+        @Named("Mutfaklar") mutfakCollection: CollectionReference,
+        @Named("Kategoriler") kategoriCollection: CollectionReference
+    ): FirestoreDataSource {
+        return FirestoreDataSource(mutfakCollection, kategoriCollection)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRepository(fds: FirestoreDataSource): Repository {
+        return Repository(fds)
     }
 }

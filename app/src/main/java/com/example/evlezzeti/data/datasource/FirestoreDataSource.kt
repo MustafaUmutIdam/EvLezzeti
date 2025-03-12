@@ -1,17 +1,17 @@
 package com.example.evlezzeti.data.datasource
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import com.example.evlezzeti.data.entity.Kategori
 import com.example.evlezzeti.data.entity.Kullanici
 import com.example.evlezzeti.data.entity.Mutfak
 import com.google.firebase.firestore.CollectionReference
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
-class FirestoreDataSource (var collection: CollectionReference) {
+
+class FirestoreDataSource (var mutfakCollection: CollectionReference, var kategoriCollection: CollectionReference) {
 
     var kullanici = MutableLiveData<Kullanici>()
     var mutfakListe = MutableLiveData<List<Mutfak>>()
+    var kategoriListe = MutableLiveData<List<Kategori>>()
 
     fun kullaniciGirisKontrol(ePosta:String, sifre:String): Boolean {
 
@@ -20,9 +20,9 @@ class FirestoreDataSource (var collection: CollectionReference) {
 
         return ePosta == dogruEPosta && sifre==dogruSifre
     }
-    
+
      fun mutfakYukle() : MutableLiveData<List<Mutfak>>{ // Mutfak listesinin dondugu yer
-         collection.addSnapshotListener { value, error ->
+         mutfakCollection.addSnapshotListener { value, error ->
              if (value !=null ){
                  val liste = ArrayList<Mutfak>()
 
@@ -38,4 +38,21 @@ class FirestoreDataSource (var collection: CollectionReference) {
          }
             return mutfakListe
      }
+    fun kategoriYukle() : MutableLiveData<List<Kategori>>{ // Kategori listesinin dondugu yer
+        kategoriCollection.addSnapshotListener { value, error ->
+            if (value !=null ){
+                val liste = ArrayList<Kategori>()
+
+                for (k in value.documents){
+                    val kategori = k.toObject(Kategori::class.java)
+                    if(kategori != null) {
+                        kategori.kategoriId = k.id
+                        liste.add(kategori)
+                    }
+                }
+                kategoriListe.value = liste
+            }
+        }
+        return kategoriListe
+    }
 }

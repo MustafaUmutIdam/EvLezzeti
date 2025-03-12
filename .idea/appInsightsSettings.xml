@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.evlezzeti" />
+                  <option name="mobileSdkAppId" value="1:679114511045:android:141c9c7ce33afd8aead6ac" />
+                  <option name="projectId" value="evlezzeti-d0f47" />
+                  <option name="projectNumber" value="679114511045" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
