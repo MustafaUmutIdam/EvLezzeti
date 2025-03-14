@@ -24,12 +24,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:itemActiveIndicatorStyle="@style/Theme.BottomNavigationView.ActiveIndicator"
-        app:itemIconTint="@color/anaRenk"
         app:itemRippleColor="@android:color/transparent"
-        app:itemTextColor="@color/anaRenk"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        style="@style/BottomNavigationTheme"
+        app:itemIconTint="@color/bottom_nav_colors"
+        app:itemTextColor="@color/bottom_nav_colors"
         app:menu="@menu/menu_tasarim" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

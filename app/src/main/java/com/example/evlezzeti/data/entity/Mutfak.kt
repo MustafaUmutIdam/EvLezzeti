@@ -10,4 +10,6 @@ data class Mutfak(
     val mutfakPuan:String? ="",
     val mutfakDetay:String? ="",
     val mutfakAdres:String? ="",
-    val mutfakResim:String? =""):Serializable
+    val mutfakResim:String? ="",
+    val mutfakIndirimTag:String?=""
+):Serializable

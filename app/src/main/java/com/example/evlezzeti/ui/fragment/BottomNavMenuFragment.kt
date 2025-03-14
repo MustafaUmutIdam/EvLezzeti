@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.example.evlezzeti.R
 import com.example.evlezzeti.databinding.FragmentBottomNavMenuBinding
+import com.example.evlezzeti.ui.adapter.KategoriAdapter
 import com.example.evlezzeti.ui.adapter.MutfakAdapter
 import com.example.evlezzeti.ui.viewmodel.BottomNavMenuViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -33,6 +34,12 @@ class BottomNavMenuFragment : Fragment() {
             val mutfakAdapter = MutfakAdapter(requireContext(),it)
             binding.mutfakAdapter = mutfakAdapter
             Log.e("FragmentBilgi", "${it[0].mutfakAd} Bilgii")
+        }
+
+        viewModel.kategoriListe.observe(viewLifecycleOwner){
+            val kategoriAdapter = KategoriAdapter(requireContext(),it)
+            binding.kategoriAdapter = kategoriAdapter
+            Log.e("FragmentBilgi", "${it[0].kategoriAd} Bilgii")
         }
 
 
