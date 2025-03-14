@@ -11,7 +11,7 @@ android {
     namespace = "com.example.evlezzeti"
     compileSdk = 34
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
         dataBinding = true
     }
